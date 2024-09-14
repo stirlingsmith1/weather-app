@@ -1,38 +1,103 @@
-.App {
+/* Center the app container */
+.app-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a4a1a1, #f5f5f5); 
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center; 
+}
+
+/* Title styling */
+.app-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px; 
+  font-family: 'Arial', sans-serif;
+}
+
+/* Weather widget container */
+.weather-widget {
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #4a90e2, #5dbcd2);
+  color: white;
+  border-radius: 20px; 
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Form styling */
+.city-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input field styling */
+.city-input {
+  padding: 10px;
+  border: none;
+  border-radius: 30px; 
+  margin-right: 10px;
+  font-size: 1rem;
+  width: 70%;
+  outline: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Button styling */
+.submit-button {
+  padding: 10px;
+  background-color: #fff;
+  color: #4a90e2;
+  border: none;
+  border-radius: 50%; 
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover {
+  transform: scale(1.1); 
+}
+
+/* Weather information styling */
+.weather-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.temperature {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.condition {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+/* Loading and error messages */
+.loading,
+.error {
+  font-size: 1.5rem;
+  color: #ff4c4c;
+  text-align: center;
 }
